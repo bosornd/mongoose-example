@@ -4,7 +4,7 @@
 2. server.js에 route를 등록한다.
    app.use('/api/user', require('./db/route')(require('./db/user')))
    이때, ./db/route를 사용한다.
-3. tes해본다.
+3. 서버를 구동(npm run start)하고, tes해본다.
 
 $ curl -i -X POST -H "Content-Type: application/json" -d @db/user1.json localhost:8080/api/user
 $ curl -i -X POST -H "Content-Type: application/json" -d {\"name\":\"park\",\"role\":\"student\"} localhost:8080/api/user
